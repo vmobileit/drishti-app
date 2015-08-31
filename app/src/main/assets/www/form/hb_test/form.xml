@@ -1,0 +1,129 @@
+<form autocomplete="off" novalidate="novalidate" class="or clearfix" id="Hb_Test_EngKan">
+    <!--This form was created by transforming a OpenRosa-flavored (X)Form using an XSLT sheet created by Enketo LLC.-->
+    <section class="form-logo"></section>
+    <h3 id="form-title">Hb Test</h3>
+
+    <label class="question non-select ">
+        <span lang="" class="question-label active">ANC Number: </span>
+        <input autocomplete="off" type="text" name="/Hb_Test_EngKan/anc_number" data-type-xml="text" disabled="disabled"/>
+    </label>
+
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Hb test date? 
+        </span>
+        <span class="required">*</span>
+        <input type="date" name="/Hb_Test_EngKan/hb_test_date" required="required"
+               data-constraint=".&lt;= /Hb_Test_EngKan/today " data-type-xml="date"/>
+    </label>
+    <fieldset class="question ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Hb test place? 
+                </span>
+                <span class="required">*</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input type="radio" name="/Hb_Test_EngKan/hb_test_place" data-name="/Hb_Test_EngKan/hb_test_place"
+                           value="sub_center" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">My Sub Center </span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/Hb_Test_EngKan/hb_test_place" data-name="/Hb_Test_EngKan/hb_test_place"
+                           value="phc" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">My PHC </span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/Hb_Test_EngKan/hb_test_place" data-name="/Hb_Test_EngKan/hb_test_place"
+                           value="elsewhere" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Elsewhere
+                        </span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Hb level (g/dl) 
+        </span>
+        <span class="required">*</span>
+        <input type="number" name="/Hb_Test_EngKan/hb_level" required="required" data-constraint=".&gt;0"
+               data-type-xml="decimal" step="any"/>
+    </label>
+    <label class="note or-branch pre-init non-select ">
+        <span lang="" class="question-label active">Woman is anaemic! Start her on therapeutic dose of IFA (2 tablets
+            per day). 
+        </span>
+        <input type="text" name="/Hb_Test_EngKan/anaemic_message"
+               data-relevant=" /Hb_Test_EngKan/hb_level  &gt;= 7 and  /Hb_Test_EngKan/hb_level  &lt; 11"
+               data-type-xml="string" readonly="readonly"/>
+    </label>
+    <label class="note or-branch pre-init non-select ">
+        <span lang="" class="question-label active">Woman is severely anaemic! Start her on therapeutic dose of IFA (2
+            tablets per day) and refer immediately to the MO! 
+        </span>
+        <input type="text" name="/Hb_Test_EngKan/severely_anaemic_message"
+               data-relevant=" /Hb_Test_EngKan/hb_level  &lt; 7" data-type-xml="string" readonly="readonly"/>
+    </label>
+    <label class="note or-branch pre-init non-select ">
+        <span lang="" class="question-label active">Woman is at risk because of, 
+            <span class="or-output" data-value=" /Hb_Test_EngKan/high_risk_reason ">
+            </span>
+        </span>
+        <input type="text" name="/Hb_Test_EngKan/high_risk_note" data-relevant=" /Hb_Test_EngKan/is_high_risk1  = 'yes'"
+               data-type-xml="string" readonly="readonly"/>
+    </label>
+    <fieldset class="question ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Do you want to mark as HRP?
+                    
+                </span>
+                <span class="required">*</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input type="radio" name="/Hb_Test_EngKan/is_high_risk" data-name="/Hb_Test_EngKan/is_high_risk"
+                           value="yes" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Yes </span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/Hb_Test_EngKan/is_high_risk" data-name="/Hb_Test_EngKan/is_high_risk"
+                           value="no" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">No </span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+
+    <fieldset id="or-preload-items" style="display:none;">
+        <label class="calculation non-select ">
+            <input type="hidden" name="/Hb_Test_EngKan/today" data-preload="date" data-preload-params="today"
+                   data-type-xml="date"/>
+        </label>
+    </fieldset>
+    <fieldset id="or-calculated-items" style="display:none;">
+        <label class="calculation non-select ">
+            <input type="hidden" name="/Hb_Test_EngKan/anaemic_status"
+                   data-calculate="if( /Hb_Test_EngKan/hb_level  &lt; 7, 'Severe_Anaemia', (if( /Hb_Test_EngKan/hb_level  &gt;= 7 and  /Hb_Test_EngKan/hb_level  &lt; 11, 'Anaemia', '')))"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input type="hidden" name="/Hb_Test_EngKan/is_high_risk1"
+                   data-calculate="if( /Hb_Test_EngKan/case_is_high_risk_till_delivery  = 'yes' or  /Hb_Test_EngKan/case_is_high_risk_till_pnc_close  = 'yes' or  /Hb_Test_EngKan/case_pih  != '' or  /Hb_Test_EngKan/case_jaundice  != '' or  /Hb_Test_EngKan/case_multiple_preg  != '' or  /Hb_Test_EngKan/case_malpresentation  != '' or  /Hb_Test_EngKan/anaemic_status  != '', 'yes', 'no')"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input type="hidden" name="/Hb_Test_EngKan/high_risk_reason"
+                   data-calculate="concat( /Hb_Test_EngKan/anaemic_status , ' ',  /Hb_Test_EngKan/case_is_high_risk_till_delivery_reason , ' ',  /Hb_Test_EngKan/case_is_high_risk_till_pnc_close_reason , ' ',  /Hb_Test_EngKan/case_pih , ' ',  /Hb_Test_EngKan/case_jaundice , ' ',  /Hb_Test_EngKan/case_multiple_preg , ' ',  /Hb_Test_EngKan/case_malpresentation )"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input type="hidden" name="/Hb_Test_EngKan/meta/instanceID" data-calculate="concat('uuid:', uuid())"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input type="hidden" name="/Hb_Test_EngKan/formhub/uuid" data-calculate="'1eac674ca72a4ff585d68e2bf36dacdf'"
+                   data-type-xml="string"/>
+        </label>
+    </fieldset>
+</form>

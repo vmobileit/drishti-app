@@ -1,0 +1,976 @@
+<form autocomplete="off" novalidate="novalidate" class="or clearfix" id="Delivery_Outcome_EngKan">
+    <!--This form was created by transforming a OpenRosa-flavored (X)Form using an XSLT sheet created by Enketo LLC.-->
+    <section class="form-logo"></section>
+    <h3 id="form-title">PNC Registration</h3>
+
+    <label class="question non-select ">
+        <span class="question-label active" lang="">ANC Number:</span>
+        <input name="/PNC_Registration_EngKan/anc_reg_num" autocomplete="off" data-type-xml="int"
+            disabled="disabled" type="text" />
+    </label>
+    <label class="question non-select ">
+        <span class="question-label active" lang="">PNC number:
+        </span>
+        <span class="required">*</span>
+        <input name="/PNC_Registration_EngKan/pnc_number" autocomplete="off" data-constraint=".&gt;0"
+            data-type-xml="int" required="required" type="string" />
+    </label>
+
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Delivery date? </span>
+        <span class="required">*</span>
+        <input autocomplete="off" type="date" name="/PNC_Registration_EngKan/delivery_date" required="required"
+               data-constraint=".&lt;= /PNC_Registration_EngKan/today " data-type-xml="date"/>
+    </label>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">PNC registration date? 
+        </span>
+        <span class="required">*</span>
+        <input autocomplete="off" type="date" name="/PNC_Registration_EngKan/delivery_reg_date" required="required"
+               data-constraint=".&lt;= /PNC_Registration_EngKan/today  and .&gt;=  /PNC_Registration_EngKan/delivery_date "
+               data-type-xml="date"/>
+    </label>
+    <fieldset class="question ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Place of delivery? 
+                </span>
+                <span class="required">*</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/place_delivery"
+                           data-name="/PNC_Registration_EngKan/place_delivery" value="home" required="required"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Home </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/place_delivery"
+                           data-name="/PNC_Registration_EngKan/place_delivery" value="subcenter" required="required"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Sub Center </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/place_delivery"
+                           data-name="/PNC_Registration_EngKan/place_delivery" value="phc" required="required"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">PHC </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/place_delivery"
+                           data-name="/PNC_Registration_EngKan/place_delivery" value="chc" required="required"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">CHC </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/place_delivery"
+                           data-name="/PNC_Registration_EngKan/place_delivery" value="sdh" required="required"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">SDH </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/place_delivery"
+                           data-name="/PNC_Registration_EngKan/place_delivery" value="dh" required="required"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">DH </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/place_delivery"
+                           data-name="/PNC_Registration_EngKan/place_delivery" value="private_facility"
+                           required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Private </span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <label class="question or-branch pre-init non-select ">
+        <span lang="" class="question-label active">Name of delivery place? 
+        </span>
+        <input autocomplete="off" type="text" name="/PNC_Registration_EngKan/name_delivery_facility"
+               data-relevant=" /PNC_Registration_EngKan/place_delivery  != 'home'" data-type-xml="string"/>
+    </label>
+    <fieldset class="question ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Is this the only place woman went for delivery? 
+                </span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/only_delivery_facility"
+                           data-name="/PNC_Registration_EngKan/only_delivery_facility" value="yes"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Yes </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/only_delivery_facility"
+                           data-name="/PNC_Registration_EngKan/only_delivery_facility" value="no"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">No </span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <fieldset class="question or-branch pre-init ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Where else did she go for delivery? 
+                </span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input autocomplete="off" type="checkbox" name="/PNC_Registration_EngKan/addl_delivery_facility"
+                           value="home" data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">Home </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox" name="/PNC_Registration_EngKan/addl_delivery_facility"
+                           value="subcenter" data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">Sub Center </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox" name="/PNC_Registration_EngKan/addl_delivery_facility"
+                           value="phc" data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">PHC </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox" name="/PNC_Registration_EngKan/addl_delivery_facility"
+                           value="chc" data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">CHC </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox" name="/PNC_Registration_EngKan/addl_delivery_facility"
+                           value="sdh" data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">SDH </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox" name="/PNC_Registration_EngKan/addl_delivery_facility"
+                           value="dh" data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">DH </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox" name="/PNC_Registration_EngKan/addl_delivery_facility"
+                           value="private_facility"
+                           data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">Private </span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <fieldset class="question or-branch pre-init ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Select the reasons why more than one place. 
+                </span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/PNC_Registration_EngKan/reasons_addl_delivery_facility" value="no_staff"
+                           data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">No staff available for delivery </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/PNC_Registration_EngKan/reasons_addl_delivery_facility"
+                           value="referred_higher_facility"
+                           data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">Referred to higher facility </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/PNC_Registration_EngKan/reasons_addl_delivery_facility" value="lack_of_supplies"
+                           data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">Lack of supplies </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/PNC_Registration_EngKan/reasons_addl_delivery_facility" value="no_electricity"
+                           data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">No electricity </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/PNC_Registration_EngKan/reasons_addl_delivery_facility"
+                           value="family_insisted_elsewhere"
+                           data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">Family insisted on going elsewhere </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/PNC_Registration_EngKan/reasons_addl_delivery_facility" value="no_money"
+                           data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">Not enough money </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/PNC_Registration_EngKan/reasons_addl_delivery_facility" value="others"
+                           data-relevant=" /PNC_Registration_EngKan/only_delivery_facility  = 'no'"
+                           data-type-xml="select"/>
+                    <span lang="" class="option-label active">Others </span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <label class="question or-branch pre-init non-select ">
+        <span lang="" class="question-label active">Others </span>
+        <input autocomplete="off" type="text" name="/PNC_Registration_EngKan/other_reasons_addl_delivery_facility"
+               data-relevant="selected( /PNC_Registration_EngKan/reasons_addl_delivery_facility , 'others')"
+               data-type-xml="string"/>
+    </label>
+    <fieldset class="question or-branch pre-init ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Delivery attended by SBA? 
+                </span>
+                <span class="required">*</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/skilled_delivery"
+                           data-name="/PNC_Registration_EngKan/skilled_delivery" value="yes" required="required"
+                           data-relevant=" /PNC_Registration_EngKan/place_delivery  = 'home'" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Yes </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/skilled_delivery"
+                           data-name="/PNC_Registration_EngKan/skilled_delivery" value="no" required="required"
+                           data-relevant=" /PNC_Registration_EngKan/place_delivery  = 'home'" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">No </span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <fieldset class="question ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Type of delivery? 
+                </span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/type_delivery"
+                           data-name="/PNC_Registration_EngKan/type_delivery" value="normal" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Normal
+                        </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/type_delivery"
+                           data-name="/PNC_Registration_EngKan/type_delivery" value="cesarean" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Cesarean </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/type_delivery"
+                           data-name="/PNC_Registration_EngKan/type_delivery" value="instrumental_forcep"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Instrumental / Forcep </span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <fieldset class="question ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Delivery outcome? 
+                </span>
+                <span class="required">*</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/delivery_outcome"
+                           data-name="/PNC_Registration_EngKan/delivery_outcome" value="live_birth" required="required"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Live Birth </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/delivery_outcome"
+                           data-name="/PNC_Registration_EngKan/delivery_outcome" value="still_birth" required="required"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Still Birth </span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <section class="or-group-data or-branch pre-init " name="/PNC_Registration_EngKan/still_birth_group"
+             data-relevant=" /PNC_Registration_EngKan/delivery_outcome  = 'still_birth'">
+        <fieldset class="question ">
+            <fieldset>
+                <legend>
+                    <span lang="" class="question-label active">Cause of still birth? 
+                    </span>
+                </legend>
+                <div class="option-wrapper">
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               data-name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               value="infection_during_preg" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Infection during pregnancy </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               data-name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               value="gest_hypertension" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Gestational hypertension </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               data-name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               value="gest_diabetes" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Gestational diabetes </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               data-name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               value="fetal_growth_restriction" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Fetal growth restriction </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               data-name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               value="birth_defects" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Birth defects </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               data-name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               value="unknown" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Cause not identified </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               data-name="/PNC_Registration_EngKan/still_birth_group/cause_of_still_birth"
+                               value="others" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Others </span>
+                    </label>
+                </div>
+            </fieldset>
+        </fieldset>
+        <fieldset class="question ">
+            <fieldset>
+                <legend>
+                    <span lang="" class="question-label active">Woman survived childbirth? 
+                    </span>
+                    <span class="required">*</span>
+                </legend>
+                <div class="option-wrapper">
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/still_birth_group/woman_survived"
+                               data-name="/PNC_Registration_EngKan/still_birth_group/woman_survived" value="yes"
+                               required="required" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Yes </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/still_birth_group/woman_survived"
+                               data-name="/PNC_Registration_EngKan/still_birth_group/woman_survived" value="no"
+                               required="required" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">No </span>
+                    </label>
+                </div>
+            </fieldset>
+        </fieldset>
+    </section>
+    <!--end of group -->
+    <section class="or-group-data or-branch pre-init " name="/PNC_Registration_EngKan/live_birth_group"
+             data-relevant=" /PNC_Registration_EngKan/delivery_outcome  = 'live_birth'">
+        <section class="or-group " name="/PNC_Registration_EngKan/live_birth_group/child">
+            <h4>
+                <span lang="" class="question-label active">Please enter birth information for each child born. 
+                </span>
+            </h4>
+            <section class="or-repeat " name="/PNC_Registration_EngKan/live_birth_group/child">
+                <fieldset class="question ">
+                    <fieldset>
+                        <legend>
+                            <span lang="" class="question-label active">Sex of child? 
+                            </span>
+                            <span class="required">*</span>
+                        </legend>
+                        <div class="option-wrapper">
+                            <label class="">
+                                <input autocomplete="off" type="radio"
+                                       name="/PNC_Registration_EngKan/live_birth_group/child/sex_child"
+                                       data-name="/PNC_Registration_EngKan/live_birth_group/child/sex_child"
+                                       value="male" required="required" data-type-xml="select1"/>
+                                <span lang="" class="option-label active">Male </span>
+                            </label>
+                            <label class="">
+                                <input autocomplete="off" type="radio"
+                                       name="/PNC_Registration_EngKan/live_birth_group/child/sex_child"
+                                       data-name="/PNC_Registration_EngKan/live_birth_group/child/sex_child"
+                                       value="female" required="required" data-type-xml="select1"/>
+                                <span lang="" class="option-label active">Female </span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </fieldset>
+                <label class="question non-select ">
+                    <span lang="" class="question-label active">Child birthweight (in kgs)? 
+                    </span>
+                    <input autocomplete="off" type="number"
+                           name="/PNC_Registration_EngKan/live_birth_group/child/birthweight" data-type-xml="decimal"
+                           step="any"/>
+                </label>
+                <label class="question or-appearance-minimal ">
+                    <span lang="" class="question-label active">Child blood group? 
+                    </span>
+                    <select name="/PNC_Registration_EngKan/live_birth_group/child/child_blood_group"
+                            data-name="/PNC_Registration_EngKan/live_birth_group/child/child_blood_group"
+                            data-type-xml="select1">
+                        <option value="">...</option>
+                        <option value="a_positive">A+</option>
+                        <option value="a_negative">A-</option>
+                        <option value="b_positive">B+</option>
+                        <option value="b_negative">B-</option>
+                        <option value="ab_positive">AB+</option>
+                        <option value="ab_negative">AB-</option>
+                        <option value="o_positive">O+</option>
+                        <option value="o_negative">O-</option>
+                    </select>
+                    <span class="or-option-translations" style="display:none;">
+                    </span>
+                </label>
+                <fieldset class="question ">
+                    <fieldset>
+                        <legend>
+                            <span lang="" class="question-label active">Immunizations provided at birth? 
+                            </span>
+                        </legend>
+                        <div class="option-wrapper">
+                            <label class="">
+                                <input autocomplete="off" type="checkbox"
+                                       name="/PNC_Registration_EngKan/live_birth_group/child/immunizations_atbirth"
+                                       value="bcg" data-type-xml="select"/>
+                                <span lang="" class="option-label active">BCG </span>
+                            </label>
+                            <label class="">
+                                <input autocomplete="off" type="checkbox"
+                                       name="/PNC_Registration_EngKan/live_birth_group/child/immunizations_atbirth"
+                                       value="opv_0" data-type-xml="select"/>
+                                <span lang="" class="option-label active">OPV 0 
+                                </span>
+                            </label>
+                            <label class="">
+                                <input autocomplete="off" type="checkbox"
+                                       name="/PNC_Registration_EngKan/live_birth_group/child/immunizations_atbirth"
+                                       value="hepb_0" data-type-xml="select"/>
+                                <span lang="" class="option-label active">Hep B 0 
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </fieldset>
+                <fieldset class="question or-branch pre-init ">
+                    <fieldset>
+                        <legend>
+                            <span lang="" class="question-label active">Hep B prophylaxis provided? 
+                            </span>
+                        </legend>
+                        <div class="option-wrapper">
+                            <label class="">
+                                <input autocomplete="off" type="radio"
+                                       name="/PNC_Registration_EngKan/live_birth_group/child/hepb_prophylaxis_provided"
+                                       data-name="/PNC_Registration_EngKan/live_birth_group/child/hepb_prophylaxis_provided"
+                                       value="yes"
+                                       data-relevant=" /PNC_Registration_EngKan/live_birth_group/child/case_hepb  != ''"
+                                       data-type-xml="select1"/>
+                                <span lang="" class="option-label active">Yes </span>
+                            </label>
+                            <label class="">
+                                <input autocomplete="off" type="radio"
+                                       name="/PNC_Registration_EngKan/live_birth_group/child/hepb_prophylaxis_provided"
+                                       data-name="/PNC_Registration_EngKan/live_birth_group/child/hepb_prophylaxis_provided"
+                                       value="no"
+                                       data-relevant=" /PNC_Registration_EngKan/live_birth_group/child/case_hepb  != ''"
+                                       data-type-xml="select1"/>
+                                <span lang="" class="option-label active">No </span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </fieldset>
+                <label class="note or-branch pre-init non-select ">
+                    <span lang="" class="question-label active">Baby is premature! Advise kangaroo care and rooming in.
+                    </span>
+                    <input autocomplete="off" type="text"
+                           name="/PNC_Registration_EngKan/live_birth_group/child/premature_message1"
+                           data-relevant=" /PNC_Registration_EngKan/live_birth_group/child/premature  != ''"
+                           data-type-xml="string" readonly="readonly"/>
+                </label>
+                <label class="note or-branch pre-init non-select ">
+                    <span lang="" class="question-label active">Child is at risk because of, 
+                        <span class="or-output"
+                              data-value=" /PNC_Registration_EngKan/live_birth_group/child/child_high_risk_reasons ">
+                        </span>
+                    </span>
+                    <input autocomplete="off" type="text"
+                           name="/PNC_Registration_EngKan/live_birth_group/child/high_risk_note_child"
+                           data-relevant=" /PNC_Registration_EngKan/live_birth_group/child/is_child_high_risk1  = 'yes'"
+                           data-type-xml="string" readonly="readonly"/>
+                </label>
+                <fieldset class="question ">
+                    <fieldset>
+                        <legend>
+                            <span lang="" class="question-label active">Do you want to mark child as HR (High Risk)?
+                           </span>
+                            <span class="required">*</span>
+                        </legend>
+                        <div class="option-wrapper">
+                            <label class="">
+                                <input autocomplete="off" type="radio"
+                                       name="/PNC_Registration_EngKan/live_birth_group/child/is_child_high_risk"
+                                       data-name="/PNC_Registration_EngKan/live_birth_group/child/is_child_high_risk"
+                                       value="yes" required="required" data-type-xml="select1"/>
+                                <span lang="" class="option-label active">Yes </span>
+                            </label>
+                            <label class="">
+                                <input autocomplete="off" type="radio"
+                                       name="/PNC_Registration_EngKan/live_birth_group/child/is_child_high_risk"
+                                       data-name="/PNC_Registration_EngKan/live_birth_group/child/is_child_high_risk"
+                                       value="no" required="required" data-type-xml="select1"/>
+                                <span lang="" class="option-label active">No </span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </fieldset>
+                <label class="note or-branch pre-init non-select ">
+                    <span lang="" class="question-label active">Child needs 3 more PNC visits on days 14, 21, and 28
+                        because of, 14, 21 
+                        <span class="or-output"
+                              data-value=" /PNC_Registration_EngKan/live_birth_group/child/child_high_risk_reasons ">
+                        </span>
+                    </span>
+                    <input autocomplete="off" type="text"
+                           name="/PNC_Registration_EngKan/live_birth_group/child/addl_pnc_visit_message"
+                           data-relevant=" /PNC_Registration_EngKan/live_birth_group/child/is_child_high_risk1  = 'yes'"
+                           data-type-xml="string" readonly="readonly"/>
+                </label>
+            </section>
+            <!--end of repeat fieldset with name /PNC_Registration_EngKan/live_birth_group/child-->
+        </section>
+        <!--end of group -->
+        <fieldset class="question ">
+            <fieldset>
+                <legend>
+                    <span lang="" class="question-label active">Mother survived childbirth? 
+                    </span>
+                    <span class="required">*</span>
+                </legend>
+                <div class="option-wrapper">
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/live_birth_group/mother_survived"
+                               data-name="/PNC_Registration_EngKan/live_birth_group/mother_survived" value="yes"
+                               required="required" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Yes </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/live_birth_group/mother_survived"
+                               data-name="/PNC_Registration_EngKan/live_birth_group/mother_survived" value="no"
+                               required="required" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">No </span>
+                    </label>
+                </div>
+            </fieldset>
+        </fieldset>
+        <fieldset class="question or-branch pre-init ">
+            <fieldset>
+                <legend>
+                    <span lang="" class="question-label active">Was breastfeeding started within 1 hour of birth? 
+                        
+                    </span>
+                    <span class="required">*</span>
+                </legend>
+                <div class="option-wrapper">
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/live_birth_group/breastfeeding_postbirth"
+                               data-name="/PNC_Registration_EngKan/live_birth_group/breastfeeding_postbirth" value="yes"
+                               required="required"
+                               data-relevant=" /PNC_Registration_EngKan/live_birth_group/mother_survived  = 'yes'"
+                               data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Yes </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/live_birth_group/breastfeeding_postbirth"
+                               data-name="/PNC_Registration_EngKan/live_birth_group/breastfeeding_postbirth" value="no"
+                               required="required"
+                               data-relevant=" /PNC_Registration_EngKan/live_birth_group/mother_survived  = 'yes'"
+                               data-type-xml="select1"/>
+                        <span lang="" class="option-label active">No </span>
+                    </label>
+                </div>
+            </fieldset>
+        </fieldset>
+    </section>
+    <!--end of group -->
+    <section class="or-group-data or-branch pre-init " name="/PNC_Registration_EngKan/maternal_death_group"
+             data-relevant="( /PNC_Registration_EngKan/still_birth_group/woman_survived  = 'no' or  /PNC_Registration_EngKan/live_birth_group/mother_survived  = 'no')">
+        <fieldset class="question ">
+            <fieldset>
+                <legend>
+                    <span lang="" class="question-label active">Cause of maternal death? 
+                    </span>
+                </legend>
+                <div class="option-wrapper">
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/maternal_death_group/maternal_death_cause"
+                               data-name="/PNC_Registration_EngKan/maternal_death_group/maternal_death_cause"
+                               value="prolonged_obstructed_labor" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Prolonged / obstructed labor </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/maternal_death_group/maternal_death_cause"
+                               data-name="/PNC_Registration_EngKan/maternal_death_group/maternal_death_cause"
+                               value="hypertension_fits" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Severe hypertension / fits </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/maternal_death_group/maternal_death_cause"
+                               data-name="/PNC_Registration_EngKan/maternal_death_group/maternal_death_cause"
+                               value="bleeding_hemorrhage" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Bleeding / hemorrhage </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/maternal_death_group/maternal_death_cause"
+                               data-name="/PNC_Registration_EngKan/maternal_death_group/maternal_death_cause"
+                               value="fever_infection" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">High fever / infection </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/maternal_death_group/maternal_death_cause"
+                               data-name="/PNC_Registration_EngKan/maternal_death_group/maternal_death_cause"
+                               value="cause_not_identified" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Cause not identified </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/maternal_death_group/maternal_death_cause"
+                               data-name="/PNC_Registration_EngKan/maternal_death_group/maternal_death_cause"
+                               value="others" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Others </span>
+                    </label>
+                </div>
+            </fieldset>
+        </fieldset>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Others </span>
+            <input autocomplete="off" type="text"
+                   name="/PNC_Registration_EngKan/maternal_death_group/other_maternal_death_cause"
+                   data-relevant=" /PNC_Registration_EngKan/maternal_death_group/maternal_death_cause  = 'others'"
+                   data-type-xml="string"/>
+        </label>
+    </section>
+    <!--end of group -->
+    <section class="or-group-data or-branch pre-init " name="/PNC_Registration_EngKan/woman_survived_group"
+             data-relevant="( /PNC_Registration_EngKan/still_birth_group/woman_survived  = 'yes' or  /PNC_Registration_EngKan/live_birth_group/mother_survived  = 'yes')">
+        <fieldset class="question or-branch pre-init ">
+            <fieldset>
+                <legend>
+                    <span lang="" class="question-label active">Rh injection given to woman? 
+                    </span>
+                </legend>
+                <div class="option-wrapper">
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/woman_survived_group/rh_injection_given"
+                               data-name="/PNC_Registration_EngKan/woman_survived_group/rh_injection_given" value="yes"
+                               data-relevant=" /PNC_Registration_EngKan/woman_survived_group/case_w_rh_negative  != ''"
+                               data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Yes </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/woman_survived_group/rh_injection_given"
+                               data-name="/PNC_Registration_EngKan/woman_survived_group/rh_injection_given" value="no"
+                               data-relevant=" /PNC_Registration_EngKan/woman_survived_group/case_w_rh_negative  != ''"
+                               data-type-xml="select1"/>
+                        <span lang="" class="option-label active">No </span>
+                    </label>
+                </div>
+            </fieldset>
+        </fieldset>
+        <fieldset class="question ">
+            <fieldset>
+                <legend>
+                    <span lang="" class="question-label active">Were there delivery complications? 
+                    </span>
+                </legend>
+                <div class="option-wrapper">
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/woman_survived_group/had_delivery_complications"
+                               data-name="/PNC_Registration_EngKan/woman_survived_group/had_delivery_complications"
+                               value="yes" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">Yes </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="radio"
+                               name="/PNC_Registration_EngKan/woman_survived_group/had_delivery_complications"
+                               data-name="/PNC_Registration_EngKan/woman_survived_group/had_delivery_complications"
+                               value="no" data-type-xml="select1"/>
+                        <span lang="" class="option-label active">No </span>
+                    </label>
+                </div>
+            </fieldset>
+        </fieldset>
+        <fieldset class="question or-branch pre-init ">
+            <fieldset>
+                <legend>
+                    <span lang="" class="question-label active">What delivery complications were there? 
+                    
+		    </span>
+                </legend>
+                <div class="option-wrapper">
+                    <label class="">
+                        <input autocomplete="off" type="checkbox"
+                               name="/PNC_Registration_EngKan/woman_survived_group/complications" value="hemorrhage"
+                               data-relevant=" /PNC_Registration_EngKan/woman_survived_group/had_delivery_complications  = 'yes'"
+                               data-type-xml="select"/>
+                        <span lang="" class="option-label active">Hemorrhage </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="checkbox"
+                               name="/PNC_Registration_EngKan/woman_survived_group/complications"
+                               value="placenta_previa"
+                               data-relevant=" /PNC_Registration_EngKan/woman_survived_group/had_delivery_complications  = 'yes'"
+                               data-type-xml="select"/>
+                        <span lang="" class="option-label active">Placenta previa </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="checkbox"
+                               name="/PNC_Registration_EngKan/woman_survived_group/complications" value="cord_prolapse"
+                               data-relevant=" /PNC_Registration_EngKan/woman_survived_group/had_delivery_complications  = 'yes'"
+                               data-type-xml="select"/>
+                        <span lang="" class="option-label active">Cord prolapse </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="checkbox"
+                               name="/PNC_Registration_EngKan/woman_survived_group/complications"
+                               value="prolonged_labor"
+                               data-relevant=" /PNC_Registration_EngKan/woman_survived_group/had_delivery_complications  = 'yes'"
+                               data-type-xml="select"/>
+                        <span lang="" class="option-label active">Prolonged / obstructed labor </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="checkbox"
+                               name="/PNC_Registration_EngKan/woman_survived_group/complications"
+                               value="abnormal_presentation"
+                               data-relevant=" /PNC_Registration_EngKan/woman_survived_group/had_delivery_complications  = 'yes'"
+                               data-type-xml="select"/>
+                        <span lang="" class="option-label active">Abnormal presentation </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="checkbox"
+                               name="/PNC_Registration_EngKan/woman_survived_group/complications" value="perineal_tear"
+                               data-relevant=" /PNC_Registration_EngKan/woman_survived_group/had_delivery_complications  = 'yes'"
+                               data-type-xml="select"/>
+                        <span lang="" class="option-label active">Perineal tear (2, 3, or 4 degree) </span>
+                    </label>
+                    <label class="">
+                        <input autocomplete="off" type="checkbox"
+                               name="/PNC_Registration_EngKan/woman_survived_group/complications" value="others"
+                               data-relevant=" /PNC_Registration_EngKan/woman_survived_group/had_delivery_complications  = 'yes'"
+                               data-type-xml="select"/>
+                        <span lang="" class="option-label active">Others </span>
+                    </label>
+                </div>
+            </fieldset>
+        </fieldset>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Others </span>
+            <input autocomplete="off" type="text"
+                   name="/PNC_Registration_EngKan/woman_survived_group/delivery_complications_other"
+                   data-relevant="selected( /PNC_Registration_EngKan/woman_survived_group/complications , 'others')"
+                   data-type-xml="string"/>
+        </label>
+    </section>
+    <!--end of group -->
+    <label class="note or-branch pre-init non-select ">
+        <span lang="" class="question-label active">Woman is still at risk because of, 
+            <span class="or-output" data-value=" /PNC_Registration_EngKan/high_risk_reason ">
+            </span>
+        </span>
+        <input autocomplete="off" type="text" name="/PNC_Registration_EngKan/high_risk_note_mother"
+               data-relevant=" /PNC_Registration_EngKan/is_high_risk1  = 'yes'" data-type-xml="string"
+               readonly="readonly"/>
+    </label>
+    <fieldset class="question or-branch pre-init ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Do you want to mark woman as HR (High Risk)?
+                    
+                </span>
+                <span class="required">*</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/is_high_risk"
+                           data-name="/PNC_Registration_EngKan/is_high_risk" value="yes" required="required"
+                           data-relevant="( /PNC_Registration_EngKan/still_birth_group/woman_survived  = 'yes' or  /PNC_Registration_EngKan/live_birth_group/mother_survived  = 'yes')"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Yes </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/PNC_Registration_EngKan/is_high_risk"
+                           data-name="/PNC_Registration_EngKan/is_high_risk" value="no" required="required"
+                           data-relevant="( /PNC_Registration_EngKan/still_birth_group/woman_survived  = 'yes' or  /PNC_Registration_EngKan/live_birth_group/mother_survived  = 'yes')"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">No </span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+
+    <fieldset id="or-preload-items" style="display:none;">
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/today" data-preload="date"
+                   data-preload-params="today" data-type-xml="date"/>
+        </label>
+    </fieldset>
+    <fieldset id="or-calculated-items" style="display:none;">
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/parity"
+                   data-calculate=" /PNC_Registration_EngKan/case_parity  + 1" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/num_livebirths"
+                   data-relevant=" /PNC_Registration_EngKan/delivery_outcome  = 'live_birth'"
+                   data-calculate=" /PNC_Registration_EngKan/case_num_livebirths  + 1" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/youngestchild_date_of_birth"
+                   data-relevant=" /PNC_Registration_EngKan/delivery_outcome  = 'live_birth'"
+                   data-calculate=" /PNC_Registration_EngKan/delivery_date " data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/youngestchild_age"
+                   data-calculate="int(( /PNC_Registration_EngKan/today  -  /PNC_Registration_EngKan/youngestchild_date_of_birth ) div 30)"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/num_stillbirths"
+                   data-relevant=" /PNC_Registration_EngKan/delivery_outcome  = 'still_birth'"
+                   data-calculate=" /PNC_Registration_EngKan/case_num_stillbirths  + 1" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden"
+                   name="/PNC_Registration_EngKan/live_birth_group/child/sex_child_female"
+                   data-calculate="if( /PNC_Registration_EngKan/live_birth_group/child/sex_child  = 'female', 1, 0)"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden"
+                   name="/PNC_Registration_EngKan/live_birth_group/child/sex_child_male"
+                   data-calculate="if( /PNC_Registration_EngKan/live_birth_group/child/sex_child  = 'male', 1, 0)"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/live_birth_group/child/lbw"
+                   data-calculate="if( /PNC_Registration_EngKan/live_birth_group/child/birthweight  &gt;= 1.5 and  /PNC_Registration_EngKan/live_birth_group/child/birthweight  &lt; 2.5, 'Low_Birth_Weight','')"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/live_birth_group/child/vlbw"
+                   data-calculate="if( /PNC_Registration_EngKan/live_birth_group/child/birthweight  &lt; 1.5, 'Very_Low_Birth_Weight', '')"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/live_birth_group/child/num_preg_days"
+                   data-calculate="int(date( /PNC_Registration_EngKan/delivery_date ) - date( /PNC_Registration_EngKan/case_lmp ))"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/live_birth_group/child/premature"
+                   data-calculate="if( /PNC_Registration_EngKan/live_birth_group/child/num_preg_days  &lt; 259, 'Premature', '')"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden"
+                   name="/PNC_Registration_EngKan/live_birth_group/child/is_child_high_risk1"
+                   data-calculate="if( /PNC_Registration_EngKan/live_birth_group/child/premature  != '' or  /PNC_Registration_EngKan/live_birth_group/child/lbw  != '' or  /PNC_Registration_EngKan/live_birth_group/child/vlbw  != '', 'yes', 'no')"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden"
+                   name="/PNC_Registration_EngKan/live_birth_group/child/child_high_risk_reasons"
+                   data-calculate="concat( /PNC_Registration_EngKan/live_birth_group/child/premature , ' ',  /PNC_Registration_EngKan/live_birth_group/child/lbw , ' ',  /PNC_Registration_EngKan/live_birth_group/child/vlbw )"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/num_children_born"
+                   data-calculate="if( /PNC_Registration_EngKan/delivery_outcome  = 'still_birth', 0, count( /PNC_Registration_EngKan/live_birth_group/child/sex_child ))"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/num_livingchildren"
+                   data-calculate=" /PNC_Registration_EngKan/case_num_livingchildren  +  /PNC_Registration_EngKan/num_children_born "
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/num_female_children_born"
+                   data-calculate="sum( /PNC_Registration_EngKan/live_birth_group/child/sex_child_female )"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/numlivingchildren_female"
+                   data-calculate=" /PNC_Registration_EngKan/case_numlivingchildren_female  +  /PNC_Registration_EngKan/num_female_children_born "
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/num_male_children_born"
+                   data-calculate="sum( /PNC_Registration_EngKan/live_birth_group/child/sex_child_male )"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/numlivingchildren_male"
+                   data-calculate=" /PNC_Registration_EngKan/case_numlivingchildren_male  +  /PNC_Registration_EngKan/num_male_children_born "
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/is_high_risk1"
+                   data-calculate="if( /PNC_Registration_EngKan/case_is_high_risk_till_pnc_close  = 'yes' or  /PNC_Registration_EngKan/case_anaemic_status  != '' or  /PNC_Registration_EngKan/case_pih  != '' or  /PNC_Registration_EngKan/case_pre_eclampsia  != '' or  /PNC_Registration_EngKan/case_jaundice  != '', 'yes', 'no')"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/high_risk_reason"
+                   data-calculate="concat( /PNC_Registration_EngKan/case_is_high_risk_till_pnc_close_reason , ' ',  /PNC_Registration_EngKan/case_anaemic_status , ' ',  /PNC_Registration_EngKan/case_pih , ' ',  /PNC_Registration_EngKan/case_pre_eclampsia , ' ',  /PNC_Registration_EngKan/case_jaundice )"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/meta/instanceID"
+                   data-calculate="concat('uuid:', uuid())" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/PNC_Registration_EngKan/formhub/uuid"
+                   data-calculate="'11a9d52e9a6548f3802326cc3585f4d0'" data-type-xml="string"/>
+        </label>
+    </fieldset>
+</form>

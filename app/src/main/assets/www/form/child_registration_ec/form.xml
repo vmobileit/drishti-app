@@ -1,0 +1,426 @@
+<form autocomplete="off" novalidate="novalidate" class="or clearfix" id="Child_Registration_EC_EngKan">
+    <!--This form was created by transforming a OpenRosa-flavored (X)Form using an XSLT sheet created by Enketo LLC.-->
+    <section class="form-logo"></section>
+    <h3 id="form-title">Child Registration - EC</h3>
+
+    <label class="question non-select ">
+        <span lang="" class="question-label active">EC Number: </span>
+        <input autocomplete="off" type="text" name="/Child_Registration_EC_EngKan/case_ec_number" data-type-xml="int" disabled="disabled"/>
+    </label>
+
+
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Women Name: </span>
+        <input autocomplete="off" type="text" name="/Child_Registration_EC_EngKan/case_woman_name" data-type-xml="string" disabled="disabled"/>
+    </label>
+
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Registration date? 
+        </span>
+        <span class="required">*</span>
+        <input autocomplete="off" type="date" name="/Child_Registration_EC_EngKan/child_reg_date" required="required"
+               data-constraint=".&lt;= /Child_Registration_EC_EngKan/today " data-type-xml="date"/>
+    </label>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Child birth date? </span>
+        <span class="required">*</span>
+        <input autocomplete="off" type="date" name="/Child_Registration_EC_EngKan/child_birth_date" required="required"
+               data-constraint=".&gt; ( /Child_Registration_EC_EngKan/today  - 2191.5) and .&lt;= /Child_Registration_EC_EngKan/today  and .&lt;= /Child_Registration_EC_EngKan/child_reg_date "
+               data-type-xml="date"/>
+    </label>
+    <label class="note non-select ">
+        <span lang="" class="question-label active">Child age, 
+            <span class="or-output" data-value=" /Child_Registration_EC_EngKan/child_age ">
+            </span>
+            months 
+        </span>
+        <input autocomplete="off" type="text" name="/Child_Registration_EC_EngKan/child_age_note" data-type-xml="string"
+               readonly="readonly"/>
+    </label>
+    <fieldset class="question ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Child sex? 
+                </span>
+                <span class="required">*</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/Child_Registration_EC_EngKan/child_sex"
+                           data-name="/Child_Registration_EC_EngKan/child_sex" value="female" required="required"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Female </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/Child_Registration_EC_EngKan/child_sex"
+                           data-name="/Child_Registration_EC_EngKan/child_sex" value="male" required="required"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Male </span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Child name? </span>
+        <input autocomplete="off" type="text" name="/Child_Registration_EC_EngKan/child_name" data-type-xml="string"/>
+    </label>
+    <!--<label class="question non-select ">-->
+        <!--<span lang="" class="question-label active">Thayi card number, -->
+        <!--</span>-->
+        <!--<input autocomplete="off" type="number" name="/Child_Registration_EC_EngKan/thayi_card_number"-->
+               <!--data-constraint=".&gt; 999999 and .&lt; 10000000" data-type-xml="int"/>-->
+    <!--</label>-->
+    <label class="question or-appearance-minimal ">
+        <span lang="" class="question-label active">Child blood group? 
+        </span>
+        <select name="/Child_Registration_EC_EngKan/child_blood_group"
+                data-name="/Child_Registration_EC_EngKan/child_blood_group" data-type-xml="select1">
+            <option value="">...</option>
+            <option value="a_positive">A+</option>
+            <option value="a_negative">A-</option>
+            <option value="b_positive">B+</option>
+            <option value="b_negative">B-</option>
+            <option value="ab_positive">AB+</option>
+            <option value="ab_negative">AB-</option>
+            <option value="o_positive">O+</option>
+            <option value="o_negative">O-</option>
+        </select>
+        <span class="or-option-translations" style="display:none;">
+        </span>
+    </label>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Child birthweight (in kgs)? 
+        </span>
+        <input autocomplete="off" type="number" name="/Child_Registration_EC_EngKan/birthweight" data-type-xml="decimal"
+               step="any"/>
+    </label>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Current weight (in kgs)? 
+        </span>
+        <input autocomplete="off" type="number" name="/Child_Registration_EC_EngKan/child_weight"
+               data-type-xml="decimal" step="any"/>
+    </label>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Current height (in cms)? 
+        </span>
+        <input autocomplete="off" type="number" name="/Child_Registration_EC_EngKan/child_height" data-type-xml="int"/>
+    </label>
+    <label class="question or-appearance-minimal ">
+        <span lang="" class="question-label active">Immunizations already received? 
+        </span>
+        <select multiple="multiple" name="/Child_Registration_EC_EngKan/child_immunization_history"
+                data-type-xml="select">
+            <option value="">...</option>
+            <option value="bcg">BCG </option>
+            <option value="opv_0">OPV 0 </option>
+            <option value="hepb_0">Hep B 0 
+            </option>
+            <option value="opv_1">OPV 1 </option>
+            <option value="pentavalent_1">Pentavalent 1 
+            </option>
+            <option value="opv_2">OPV 2 </option>
+            <option value="pentavalent_2">Pentavalent 2 
+            </option>
+            <option value="opv_3">OPV 3 </option>
+            <option value="pentavalent_3">Pentavalent 3 
+            </option>
+            <option value="measles">Measles 1 </option>
+            <option value="je">JE 1</option>
+            <option value="mmr">MMR </option>
+            <option value="dptbooster_1">DPT Booster 1 
+            </option>
+            <option value="opvbooster">OPV Booster </option>
+            <option value="measlesbooster">Measles 2 </option>
+            <option value="je_2">JE 2</option>
+            <option value="dptbooster_2">DPT Booster 2 (5 years) 
+            </option>
+        </select>
+        <span class="or-option-translations" style="display:none;">
+        </span>
+    </label>
+    <section class="or-group-data or-branch pre-init "
+             name="/Child_Registration_EC_EngKan/child_immunization_history_group"
+             data-relevant=" /Child_Registration_EC_EngKan/child_immunization_history  != ''">
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">BCG date? </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/bcg_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'bcg')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">OPV 0 date? </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/opv_0_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'opv_0')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Hep B 0 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/hepb_0_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'hepb_0')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">OPV 1 date? </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/opv_1_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'opv_1')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Pentavalent 1 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/pentavalent_1_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'pentavalent_1')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">OPV 2 date? </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/opv_2_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'opv_2')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Pentavalent 2 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/pentavalent_2_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'pentavalent_2')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">OPV 3 date? </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/opv_3_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'opv_3')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Pentavalent 3 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/pentavalent_3_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'pentavalent_3')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Measles 1 date? </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/measles_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'measles')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">JE 1 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/je_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'je')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">MMR date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/mmr_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'mmr')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">DPT Booster 1 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/dptbooster_1_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'dptbooster_1')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">OPV Booster date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/opvbooster_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'opvbooster')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Measles 2 date? </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/measlesbooster_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'measlesbooster')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">JE 2 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/je_2_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'je_2')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">DPT Booster 2 (5 years) date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_immunization_history_group/dptbooster_2_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_immunization_history , 'dptbooster_2')"
+                   data-type-xml="date"/>
+        </label>
+    </section>
+    <!--end of group -->
+    <label class="question or-appearance-minimal ">
+        <span lang="" class="question-label active">Vitamin A doses already received? 
+        </span>
+        <select multiple="multiple" name="/Child_Registration_EC_EngKan/child_vitamin_a_history" data-type-xml="select">
+            <option value="">...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <span class="or-option-translations" style="display:none;">
+        </span>
+    </label>
+    <section class="or-group-data or-branch pre-init "
+             name="/Child_Registration_EC_EngKan/child_vitamin_a_history_group"
+             data-relevant=" /Child_Registration_EC_EngKan/child_vitamin_a_history  != ''">
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Vitamin A 1 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_vitamin_a_history_group/vita1_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_vitamin_a_history , '1')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Vitamin A 2 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_vitamin_a_history_group/vita2_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_vitamin_a_history , '2')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Vitamin A 3 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_vitamin_a_history_group/vita3_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_vitamin_a_history , '3')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Vitamin A 4 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_vitamin_a_history_group/vita4_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_vitamin_a_history , '4')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Vitamin A 5 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_vitamin_a_history_group/vita5_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_vitamin_a_history , '5')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Vitamin A 6 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_vitamin_a_history_group/vita6_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_vitamin_a_history , '6')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Vitamin A 7 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_vitamin_a_history_group/vita7_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_vitamin_a_history , '7')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Vitamin A 8 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_vitamin_a_history_group/vita8_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_vitamin_a_history , '8')"
+                   data-type-xml="date"/>
+        </label>
+        <label class="question or-branch pre-init non-select ">
+            <span lang="" class="question-label active">Vitamin A 9 date? 
+            </span>
+            <input autocomplete="off" type="date"
+                   name="/Child_Registration_EC_EngKan/child_vitamin_a_history_group/vita9_date"
+                   data-constraint=".&gt;=  /Child_Registration_EC_EngKan/child_birth_date  and .&lt;= /Child_Registration_EC_EngKan/today "
+                   data-relevant="selected( /Child_Registration_EC_EngKan/child_vitamin_a_history , '9')"
+                   data-type-xml="date"/>
+        </label>
+    </section>
+    <!--end of group -->
+
+    <fieldset id="or-preload-items" style="display:none;">
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Registration_EC_EngKan/today" data-preload="date"
+                   data-preload-params="today" data-type-xml="date"/>
+        </label>
+    </fieldset>
+    <fieldset id="or-calculated-items" style="display:none;">
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Registration_EC_EngKan/mother_name"
+                   data-calculate=" /Child_Registration_EC_EngKan/case_woman_name " data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Registration_EC_EngKan/father_name"
+                   data-calculate=" /Child_Registration_EC_EngKan/case_husband_name " data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Registration_EC_EngKan/child_age"
+                   data-calculate="if( /Child_Registration_EC_EngKan/child_birth_date  = '', '', int(( /Child_Registration_EC_EngKan/today  -  /Child_Registration_EC_EngKan/child_birth_date ) div 30.42))"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Registration_EC_EngKan/meta/instanceID"
+                   data-calculate="concat('uuid:', uuid())" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Registration_EC_EngKan/formhub/uuid"
+                   data-calculate="'7493a342fa644a4caa7fcd949f7a9e2e'" data-type-xml="string"/>
+        </label>
+    </fieldset>
+</form>

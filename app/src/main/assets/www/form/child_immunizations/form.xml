@@ -1,0 +1,214 @@
+<form autocomplete="off" novalidate="novalidate" class="or clearfix" id="Child_Immunizations_EngKan">
+    <!--This form was created by transforming a OpenRosa-flavored (X)Form using an XSLT sheet created by Enketo LLC.-->
+    <section class="form-logo"></section>
+    <h3 id="form-title">Child Immunization</h3>
+
+    <label class="question non-select ">
+        <span class="question-label active" lang="">Women Name:</span>
+        <input name="/Child_Immunizations_EngKan/case_woman_name" autocomplete="off" data-type-xml="string"
+            disabled="disabled" type="text" />
+    </label>
+
+    <fieldset class="question ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Immunizations provided to child, 
+                </span>
+                <span class="required">*</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="bcg"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">BCG </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="opv_0"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">OPV 0 </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="hepb_0"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">Hep B 0 
+                    </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="opv_1"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">OPV 1 </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="pentavalent_1"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">Pentavalent 1 
+                    </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="opv_2"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">OPV 2 </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="pentavalent_2"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">Pentavalent 2 
+                    </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="opv_3"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">OPV 3 </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="pentavalent_3"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">Pentavalent 3 
+                    </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="measles"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">Measles 1 </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="je"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">JE 1</span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="mmr"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">MMR </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="dptbooster_1"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">DPT Booster 1 
+                    </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="opvbooster"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">OPV Booster </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="measlesbooster"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">Measles 2 </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="je_2"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">JE 2</span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="checkbox"
+                           name="/Child_Immunizations_EngKan/entity_immunizations_received" value="dptbooster_2"
+                           required="required" data-type-xml="select"/>
+                    <span lang="" class="option-label active">DPT Booster 2 (5 years) 
+                    </span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <fieldset class="question ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Place of immunization? 
+                </span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/Child_Immunizations_EngKan/immunization_place"
+                           data-name="/Child_Immunizations_EngKan/immunization_place" value="sub_center"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">My Sub Center </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/Child_Immunizations_EngKan/immunization_place"
+                           data-name="/Child_Immunizations_EngKan/immunization_place" value="phc"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">My PHC </span>
+                </label>
+                <label class="">
+                    <input autocomplete="off" type="radio" name="/Child_Immunizations_EngKan/immunization_place"
+                           data-name="/Child_Immunizations_EngKan/immunization_place" value="elsewhere"
+                           data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Elsewhere
+                        </span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Immunization date? 
+        </span>
+        <span class="required">*</span>
+        <input autocomplete="off" type="date" name="/Child_Immunizations_EngKan/immunization_date" required="required"
+               data-constraint="if(selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'bcg') or selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'opv_0') or selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'hepb_0'), .&gt;=  /Child_Immunizations_EngKan/case_child_birth_date  and .&lt;= /Child_Immunizations_EngKan/today , if(selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'opv_1') or selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'pentavalent_1'), .&gt;=  /Child_Immunizations_EngKan/three_weeks  and .&lt;= /Child_Immunizations_EngKan/today , if(selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'opv_2') or selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'pentavalent_2'), .&gt;= /Child_Immunizations_EngKan/seven_weeks  and .&lt;= /Child_Immunizations_EngKan/today , if(selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'opv_3') or selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'pentavalent_3'), .&gt;= /Child_Immunizations_EngKan/eleven_weeks  and .&lt;= /Child_Immunizations_EngKan/today , if(selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'measles'), .&gt;= /Child_Immunizations_EngKan/eight_months  and .&lt;= /Child_Immunizations_EngKan/today , if(selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'mmr') or selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'dptbooster_1') or selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'opvbooster') or selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'measlesbooster'), .&gt;=  /Child_Immunizations_EngKan/sixteen_months  and .&lt;= /Child_Immunizations_EngKan/today , if(selected( /Child_Immunizations_EngKan/entity_immunizations_received , 'dptbooster_2'), .&gt;= /Child_Immunizations_EngKan/four_years  and .&lt;= /Child_Immunizations_EngKan/today , .&lt;= /Child_Immunizations_EngKan/today )))))))"
+               data-type-xml="date"/>
+    </label>
+
+    <fieldset id="or-preload-items" style="display:none;">
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Immunizations_EngKan/today" data-preload="date"
+                   data-preload-params="today" data-type-xml="date"/>
+        </label>
+    </fieldset>
+    <fieldset id="or-calculated-items" style="display:none;">
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Immunizations_EngKan/three_weeks"
+                   data-calculate=" /Child_Immunizations_EngKan/case_child_birth_date  + 21" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Immunizations_EngKan/seven_weeks"
+                   data-calculate=" /Child_Immunizations_EngKan/case_child_birth_date  + 49" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Immunizations_EngKan/eleven_weeks"
+                   data-calculate=" /Child_Immunizations_EngKan/case_child_birth_date  + 77" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Immunizations_EngKan/eight_months"
+                   data-calculate=" /Child_Immunizations_EngKan/case_child_birth_date  + 243" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Immunizations_EngKan/sixteen_months"
+                   data-calculate=" /Child_Immunizations_EngKan/case_child_birth_date  + 486" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Immunizations_EngKan/four_years"
+                   data-calculate=" /Child_Immunizations_EngKan/case_child_birth_date  + 1461" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Immunizations_EngKan/immunizations_given"
+                   data-calculate="concat( /Child_Immunizations_EngKan/entity_immunizations_given , ' ',  /Child_Immunizations_EngKan/entity_immunizations_received )"
+                   data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Immunizations_EngKan/meta/instanceID"
+                   data-calculate="concat('uuid:', uuid())" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input autocomplete="off" type="hidden" name="/Child_Immunizations_EngKan/formhub/uuid"
+                   data-calculate="'517d55ce8f854b1191f1148b41eb8879'" data-type-xml="string"/>
+        </label>
+    </fieldset>
+</form>
