@@ -19,7 +19,7 @@ public class DoctorChildScreenActivity extends DoctorPatientDetailSuperActivity 
     String documentId = null;
 
     @Override
-    protected String setDatatoViews(String formInfo) {
+    public String setDatatoViews(String formInfo) {
         documentId = getDatafromJson(formInfo, DoctorFormDataConstants.documentId);
         et_mother_name.setText(getDatafromJson(formInfo, DoctorFormDataConstants.wife_name));
         et_child_name.setText(getDatafromJson(formInfo, DoctorFormDataConstants.child_name));

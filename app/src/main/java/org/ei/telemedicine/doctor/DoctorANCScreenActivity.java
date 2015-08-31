@@ -27,7 +27,7 @@ public class DoctorANCScreenActivity extends DoctorPatientDetailSuperActivity im
     org.ei.telemedicine.view.customControls.CustomFontTextView tv_risks;
 
     @Override
-    protected String setDatatoViews(String formInfo) {
+    public String setDatatoViews(String formInfo) {
         documentId = getDatafromJson(formInfo, DoctorFormDataConstants.documentId);
         et_anc_num.setText("Visit No " + getDatafromJson(formInfo, DoctorFormDataConstants.anc_visit_number));
         et_woman_name.setText(getDatafromJson(formInfo, DoctorFormDataConstants.wife_name));

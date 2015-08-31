@@ -50,7 +50,7 @@ public class DoctorPNCScreenActivity extends DoctorPatientDetailSuperActivity im
     }
 
     @Override
-    protected String setDatatoViews(String formInfo) {
+    public String setDatatoViews(String formInfo) {
 
         documentId = getDatafromJson(formInfo, DoctorFormDataConstants.documentId);
         et_pnc_num.setText(getDatafromJson(formInfo, DoctorFormDataConstants.pnc_number));
