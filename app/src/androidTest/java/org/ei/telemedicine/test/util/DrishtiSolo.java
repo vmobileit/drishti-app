@@ -3,7 +3,7 @@ package org.ei.telemedicine.test.util;
 import android.app.Activity;
 import android.app.Instrumentation;
 
-import com.jayway.android.robotium.solo.Solo;
+import com.robotium.solo.Solo;
 
 import org.ei.telemedicine.view.activity.HomeActivity;
 import org.ei.telemedicine.view.activity.LoginActivity;
