@@ -3,11 +3,11 @@ package org.ei.telemedicine.repository;
 import android.test.AndroidTestCase;
 import android.test.RenamingDelegatingContext;
 import org.apache.commons.lang3.tuple.Pair;
-import org.ei.opensrp.domain.EligibleCouple;
-import org.ei.opensrp.domain.Mother;
-import org.ei.opensrp.util.DateUtil;
-import org.ei.opensrp.util.EasyMap;
-import org.ei.opensrp.util.Session;
+import org.ei.telemedicine.domain.EligibleCouple;
+import org.ei.telemedicine.domain.Mother;
+import org.ei.telemedicine.util.DateUtil;
+import org.ei.telemedicine.util.EasyMap;
+import org.ei.telemedicine.util.Session;
 import org.joda.time.LocalDate;
 
 import java.util.Collections;
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 import static java.util.Arrays.asList;
-import static org.ei.opensrp.util.EasyMap.mapOf;
+import static org.ei.telemedicine.util.EasyMap.mapOf;
 
 public class MotherRepositoryTest extends AndroidTestCase {
     private MotherRepository repository;

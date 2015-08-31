@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="project_cms50dj_jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/project_cms50dj_jar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

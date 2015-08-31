@@ -5,14 +5,14 @@ import android.test.AndroidTestCase;
 import android.test.RenamingDelegatingContext;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import org.ei.opensrp.domain.EligibleCouple;
-import org.ei.opensrp.domain.Mother;
-import org.ei.opensrp.domain.form.FormData;
-import org.ei.opensrp.domain.form.FormField;
-import org.ei.opensrp.domain.form.FormInstance;
-import org.ei.opensrp.domain.form.FormSubmission;
-import org.ei.opensrp.util.FormSubmissionBuilder;
-import org.ei.opensrp.util.Session;
+import org.ei.telemedicine.domain.EligibleCouple;
+import org.ei.telemedicine.domain.Mother;
+import org.ei.telemedicine.domain.form.FormData;
+import org.ei.telemedicine.domain.form.FormField;
+import org.ei.telemedicine.domain.form.FormInstance;
+import org.ei.telemedicine.domain.form.FormSubmission;
+import org.ei.telemedicine.util.FormSubmissionBuilder;
+import org.ei.telemedicine.util.Session;
 
 import java.text.MessageFormat;
 import java.util.Date;
@@ -20,10 +20,10 @@ import java.util.List;
 import java.util.Map;
 
 import static java.util.Arrays.asList;
-import static org.ei.opensrp.domain.SyncStatus.PENDING;
-import static org.ei.opensrp.domain.SyncStatus.SYNCED;
-import static org.ei.opensrp.util.EasyMap.create;
-import static org.ei.opensrp.util.EasyMap.mapOf;
+import static org.ei.telemedicine.domain.SyncStatus.PENDING;
+import static org.ei.telemedicine.domain.SyncStatus.SYNCED;
+import static org.ei.telemedicine.util.EasyMap.create;
+import static org.ei.telemedicine.util.EasyMap.mapOf;
 
 public class FormDataRepositoryTest extends AndroidTestCase {
     private FormDataRepository repository;
@@ -38,7 +38,7 @@ public class FormDataRepositoryTest extends AndroidTestCase {
         ChildRepository childRepository = new ChildRepository();
         motherRepository = new MotherRepository();
         eligibleCoupleRepository = new EligibleCoupleRepository();
-        Session session = new Session().setPassword("password").setRepositoryName("opensrp.db" + new Date().getTime());
+        Session session = new Session().setPassword("password").setRepositoryName("telemedicine.db" + new Date().getTime());
         new Repository(new RenamingDelegatingContext(getContext(), "test_"), session,
                 repository, eligibleCoupleRepository, alertRepository, timelineEventRepository, childRepository, motherRepository);
     }

@@ -2,15 +2,15 @@ package org.ei.telemedicine.repository;
 
 import android.test.AndroidTestCase;
 import android.test.RenamingDelegatingContext;
-import org.ei.opensrp.domain.*;
-import org.ei.drishti.dto.AlertStatus;
-import org.ei.opensrp.util.Session;
+import org.ei.telemedicine.domain.*;
+import org.ei.telemedicine.dto.AlertStatus;
+import org.ei.telemedicine.util.Session;
 
 import java.util.*;
 
 import static java.util.Arrays.asList;
-import static org.ei.opensrp.util.EasyMap.create;
-import static org.ei.opensrp.util.EasyMap.mapOf;
+import static org.ei.telemedicine.util.EasyMap.create;
+import static org.ei.telemedicine.util.EasyMap.mapOf;
 
 public class ChildRepositoryTest extends AndroidTestCase {
     private ChildRepository repository;

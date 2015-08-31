@@ -2,14 +2,14 @@ package org.ei.telemedicine.repository;
 
 import android.test.AndroidTestCase;
 import android.test.RenamingDelegatingContext;
-import org.ei.opensrp.domain.Alert;
-import org.ei.opensrp.util.Session;
+import org.ei.telemedicine.domain.Alert;
+import org.ei.telemedicine.util.Session;
 
 import java.util.Date;
 import java.util.List;
 
 import static java.util.Arrays.asList;
-import static org.ei.drishti.dto.AlertStatus.normal;
+import static org.ei.telemedicine.dto.AlertStatus.normal;
 
 public class RepositoryTest extends AndroidTestCase {
     public void testShouldCheckPassword() throws Exception {

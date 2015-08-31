@@ -2,8 +2,8 @@ package org.ei.telemedicine.repository;
 
 import android.test.AndroidTestCase;
 import android.test.RenamingDelegatingContext;
-import org.ei.opensrp.domain.EligibleCouple;
-import org.ei.opensrp.util.Session;
+import org.ei.telemedicine.domain.EligibleCouple;
+import org.ei.telemedicine.util.Session;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.Map;
 
 import static java.util.Arrays.asList;
-import static org.ei.opensrp.util.EasyMap.create;
-import static org.ei.opensrp.util.EasyMap.mapOf;
+import static org.ei.telemedicine.util.EasyMap.create;
+import static org.ei.telemedicine.util.EasyMap.mapOf;
 
 public class EligibleCoupleRepositoryTest extends AndroidTestCase {
     private EligibleCoupleRepository repository;
@@ -28,7 +28,7 @@ public class EligibleCoupleRepositoryTest extends AndroidTestCase {
         childRepository = new ChildRepository();
         motherRepository = new MotherRepository();
         repository = new EligibleCoupleRepository();
-        Session session = new Session().setPassword("password").setRepositoryName("opensrp.db" + new Date().getTime());
+        Session session = new Session().setPassword("password").setRepositoryName("telemedicine.db" + new Date().getTime());
         new Repository(new RenamingDelegatingContext(getContext(), "test_"), session, repository, alertRepository,
                 timelineEventRepository, childRepository, motherRepository);
     }

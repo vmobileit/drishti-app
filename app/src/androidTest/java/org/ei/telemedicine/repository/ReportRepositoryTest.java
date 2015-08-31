@@ -3,9 +3,9 @@ package org.ei.telemedicine.repository;
 import android.test.AndroidTestCase;
 import android.test.RenamingDelegatingContext;
 import com.google.gson.Gson;
-import org.ei.opensrp.domain.Report;
-import org.ei.drishti.dto.MonthSummaryDatum;
-import org.ei.opensrp.util.Session;
+import org.ei.telemedicine.domain.Report;
+import org.ei.telemedicine.dto.MonthSummaryDatum;
+import org.ei.telemedicine.util.Session;
 
 import java.util.Date;
 import java.util.List;

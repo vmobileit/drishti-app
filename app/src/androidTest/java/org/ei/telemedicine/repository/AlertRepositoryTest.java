@@ -2,8 +2,9 @@ package org.ei.telemedicine.repository;
 
 import android.test.AndroidTestCase;
 import android.test.RenamingDelegatingContext;
-import org.ei.opensrp.domain.Alert;
-import org.ei.opensrp.util.Session;
+
+import org.ei.telemedicine.util.Session;
+import org.ei.telemedicine.domain.Alert;
 import org.joda.time.LocalDate;
 
 import java.util.ArrayList;
@@ -11,7 +12,10 @@ import java.util.Date;
 import java.util.List;
 
 import static java.util.Arrays.asList;
-import static org.ei.drishti.dto.AlertStatus.*;
+import static org.ei.telemedicine.dto.AlertStatus.complete;
+import static org.ei.telemedicine.dto.AlertStatus.inProcess;
+import static org.ei.telemedicine.dto.AlertStatus.normal;
+import static org.ei.telemedicine.dto.AlertStatus.urgent;
 
 public class AlertRepositoryTest extends AndroidTestCase {
     private AlertRepository alertRepository;

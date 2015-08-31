@@ -33,6 +33,7 @@ public class ViewPlanOfCareActivityTest extends ActivityInstrumentationTestCase2
         setupService(drishtiService, userService, 100000).updateApplicationContext(getActivity());
 
         solo = new DrishtiSolo(getInstrumentation(), getActivity());
+
     }
 
     @Override

@@ -2,7 +2,7 @@ package org.ei.telemedicine.repository;
 
 import android.test.AndroidTestCase;
 import android.test.RenamingDelegatingContext;
-import org.ei.opensrp.util.Session;
+import org.ei.telemedicine.util.Session;
 
 import java.util.Arrays;
 import java.util.Date;
